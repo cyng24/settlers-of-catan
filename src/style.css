@@ -1,9 +1,32 @@
 .row {
   display: flex;
   justify-content: center;
-  margin-top: -34px;
+}
+.board {
+  margin-top: -31px;
+}
+.piece {
+  height: 23px;
 }
 
-.align-center {
-  text-align: center;
+.building {
+  position: relative;
+  width: 110px;
+}
+
+.button {
+  display: grid;
+  position: absolute;
+  left:35%;
+  background-color: transparent;
+  border-style: none;
+}
+
+.absolute {
+  position: absolute;
+  width: 100%;
+}
+
+.margin-top {
+  margin-top: 37px;
 }

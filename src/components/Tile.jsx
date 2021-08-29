@@ -2,13 +2,13 @@ import React from 'react';
 import '../style.css';
 
 const Tile = (props) => {
-  const textX = props.value > 9 ? "48" :"55";
+  const textX = props.value > 9 ? "45" :"50";
   return (
     <div>
-      <svg width="140" height="140">
-        <polygon points="0 30 65 0 130 30 130 100 65 130 0 100"stroke="none" fill={props.type}/>
-        <circle cx="65" cy="65" r="20" stroke="none" fill="white" />
-        <text x={textX} y="75" fontWeight="bold" fontSize="30px" fill="black">{props.value}</text>
+      <svg width="110" height="110">
+        <polygon points="3 26 55 0 107 26 107 77 55 104 3 77" stroke="none" fill={props.type}/>
+        <circle cx="55" cy="50" r="15" stroke="none" fill="white" />
+        <text x={textX} y="57" fontWeight="bold" fontSize="20px" fill="black">{props.value}</text>
       </svg>
     </div>
   )
