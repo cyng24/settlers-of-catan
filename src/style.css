@@ -9,12 +9,12 @@
   height: 23px;
 }
 
-.building {
-  position: relative;
-  width: 110px;
+.road {
+  display: flex;
+  margin-top: -5px;
 }
 
-.button {
+.button-city {
   display: grid;
   position: absolute;
   left:35%;
@@ -22,11 +22,46 @@
   border-style: none;
 }
 
+.button-road {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+  width: 35px;
+  height: 15px;
+}
+
+.rotate-right {
+  transform: rotate(27deg);
+}
+.rotate-left {
+  transform: rotate(-27deg);
+}
+.rotate-up {
+  transform: rotate(90deg);
+  margin-top: 10px;
+}
+
 .absolute {
   position: absolute;
   width: 100%;
 }
+.relative {
+  position: relative;
+}
 
-.margin-top {
+.margin-40 {
   margin-top: 37px;
+}
+.margin-10 {
+  margin-top: 9px;
+}
+.margin--20 {
+  margin-top: -20px;
+}
+.tile-half {
+  width: 55px;
+}
+.tile-full {
+  width: 110px;
 }
