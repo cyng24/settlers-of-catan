@@ -1,13 +1,11 @@
 import * as React from "react"
-import Board from '../components/Board.jsx'
-import Pieces from '../components/Pieces.jsx'
+import Game from './Game.jsx'
 import '../style.css';
 
 function App() {
   return (
     <div>
-      <Board />
-      <Pieces />
+      <Game />
     </div>
   );
 }

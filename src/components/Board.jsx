@@ -14,9 +14,9 @@ export default class Board extends React.Component {
   }
 
   componentDidMount() {
-    const tileTypes = ['rgb(200, 100, 100)', 'rgb(200, 100, 100)', 'rgb(200, 100, 100)', 'rgb(100, 50, 20)', 'rgb(100, 50, 20)', 'rgb(100, 50, 20)', 'rgb(100, 50, 20)', 'gray', 'gray', 'gray', 'rgb(250, 200, 50)', 'rgb(250, 200, 50)', 'rgb(250, 200, 50)', 'rgb(250, 200, 50)', 'rgb(150, 200, 150)', 'rgb(150, 200, 150)', 'rgb(150, 200, 150)', 'rgb(150, 200, 150)', null]
-    const tileValues = [2, 3, 3, 4, 4, 5, 5, 6, 6, 8, 8, 9, 9, 10, 10, 11, 11, 12, null];
-    const harborTypes = ['rgb(200, 100, 100)|2:1', 'rgb(100, 50, 20)|2:1', 'gray|2:1', 'rgb(250, 200, 50)|2:1', 'rgb(150, 200, 150)|2:1', '?|3:1', '?|3:1', '?|3:1', '?|3:1'];
+    const tileTypes = ['#c86464', '#c86464', '#c86464', '#643214', '#643214', '#643214', '#643214', 'gray', 'gray', 'gray', '#fac832', '#fac832', '#fac832', '#fac832', '#96c896', '#96c896', '#96c896', '#96c896', null]
+    const tileValues = [2, 3, 3, 4, 4, 5, 5, 6, 6, 8, 8, 9, 9, 10, 10, 11, 11, 12, "Ü"];
+    const harborTypes = ['#c86464|2:1', '#643214|2:1', 'gray|2:1', '#fac832|2:1', '#96c896|2:1', '?|3:1', '?|3:1', '?|3:1', '?|3:1'];
     let types = this.randomize(tileTypes);
     let values = this.randomize(tileValues);
     let harbors = this.randomize(harborTypes);
