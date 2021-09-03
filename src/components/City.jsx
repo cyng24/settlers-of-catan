@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import '../style.css';
 
 const City = (props) => {
-  const colors = ['none', 'red', 'blue', 'orange', 'green'];
+  const green = '#009900';
+  const red = '#cc0000';
+  const yellow = '#f9c119';
+  const blue = '#1919ff';
+  const colors = ['none', red, blue, yellow, green];
   
   let [settlementColor, changeSettlementColor] = useState(0);
   const toggleColor = () => {
