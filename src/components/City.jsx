@@ -4,7 +4,7 @@ import '../style.css';
 const City = (props) => {
   const green = '#009900';
   const red = '#cc0000';
-  const yellow = '#f9c119';
+  const yellow = '#f2b706';
   const blue = '#1919ff';
   const colors = ['none', red, blue, yellow, green];
   
