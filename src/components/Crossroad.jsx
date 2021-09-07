@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style.css';
+import './component.css';
 import Road from './Road.jsx';
 
 const Crossroad = (props) => {

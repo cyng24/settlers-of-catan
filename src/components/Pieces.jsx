@@ -1,5 +1,5 @@
 import React from 'react'
-import '../style.css';
+import './main.css';
 import City from './City.jsx';
 import Road from './Road.jsx';
 import Crossroad from './Crossroad.jsx';

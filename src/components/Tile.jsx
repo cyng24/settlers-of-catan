@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style.css';
+import './component.css';
 
 const Tile = (props) => {
   const textX = props.value > 9 ? "45" :"50";

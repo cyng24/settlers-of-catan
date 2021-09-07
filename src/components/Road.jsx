@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../style.css';
+import './component.css';
 
 const Road = (props) => {
   const green = '#009900';

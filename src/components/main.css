@@ -1,0 +1,94 @@
+.game {
+  display: flex;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+}
+
+.button-dash {
+  border: solid 2px lightgray;
+  border-radius: 12px;
+  margin: 10px 0px 0px 0px;
+}
+.active {
+  background-color: lightgray;
+  outline: transparent;
+}
+
+.absolute {
+  position: absolute;
+  width: 80%;
+}
+.relative {
+  position: relative;
+}
+
+.margin-40 {
+  margin-top: 37px;
+}
+.margin-10 {
+  margin-top: 11px;
+}
+.margin--20 {
+  margin-top: -22px;
+}
+.tile-half {
+  width: 55px;
+}
+.tile-full {
+  width: 110px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .game {
+    display: block;
+  }
+
+  .dashboard {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+
+  .button-dash {
+    margin: 10px 10px 0px 0px;
+  }
+
+  .absolute {
+    top: 110px;
+    width: 100%;
+  }
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 50px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

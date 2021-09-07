@@ -1,0 +1,42 @@
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.board {
+    margin-top: -31px;
+}
+
+.piece {
+    height: 23px;
+}
+
+.road {
+    display: flex;
+    margin-top: -5px;
+}
+
+.button-city {
+    display: grid;
+    position: absolute;
+    left:35%;
+}
+
+.button-road {
+    margin: 0px;
+    padding: 0px;
+    width: 35px;
+    height: 15px;
+}
+
+.rotate-right {
+    transform: rotate(27deg);
+}
+.rotate-left {
+    transform: rotate(-27deg);
+}
+.rotate-up {
+    transform: rotate(90deg);
+    margin-top: 10px;
+}

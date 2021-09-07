@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style.css';
+import './component.css';
 
 const Harbor = (props) => {
     let propArray = props.type ? props.type.split('|') : ['white', null];

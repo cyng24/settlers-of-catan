@@ -1,5 +1,5 @@
 import React from 'react'
-import '../style.css';
+import '../components/main.css';
 import Dashboard from '../components/Dashboard.jsx'
 import Board from '../components/Board.jsx'
 import Pieces from '../components/Pieces.jsx'
@@ -21,14 +21,15 @@ export default class Game extends React.Component {
   }
 
   handleChange() {
+    console.log('ADD CITY')
     const change = !this.state.addCity
     this.setState({ addCity: change });
   }
     
   render() {
     return (
-      <div className="d-flex">
-        <Dashboard colors={this.state.colors} windowWidth={this.state.windowWidth} cityToggle={this.handleChange} />
+      <div className="game">
+        <Dashboard colors={this.state.colors} windowWidth={this.state.windowWidth} cityToggle={this.handleChange} addCity={this.state.addCity} />
         <div>
           <Board colors={this.state.colors} />
           <Pieces addCity={this.state.addCity} />

@@ -1,13 +1,18 @@
 import React from 'react'
-import '../style.css';
+import './main.css';
 
 const Dashboard = (props) => {
   const { green, red, yellow, brown, gray } = props.colors;
+  const cityActive = props.addCity ? 'button-dash active' : 'button-dash';
 
   return (
     <div className="dashboard">
-      <button className="margin-10" onClick={console.log('ROLL')}>Roll the dice</button>
-      <button className="margin-10" onClick={props.cityToggle}>Add City</button>
+      <button className="button-dash" onClick={console.log('ROLL')}>
+        <span class="material-icons">casino</span>
+      </button>
+      <button className={cityActive} onClick={props.cityToggle}>
+        <span class="material-icons">location_city</span>
+      </button>
       <svg className="margin-10" width="100%" height="60">
         <rect x="0" y="0" width="100%" height="60" fill={green}/>
         <circle cx="56" cy="20" r="12" fill="white" />
@@ -24,7 +29,7 @@ const Dashboard = (props) => {
         <rect x="20%" y="15" width="60%" height="30" stroke="white" strokeWidth="2" fill={red}/>
       </svg>
       <svg className="margin-10" width="100%" height="60">
-        <rect x="0" y="0" width="120" height="60" fill={brown}/>
+        <rect x="0" y="0" width="100%" height="60" fill={brown}/>
         <polygon points="60 0 85 25 60 20 35 25" fill="white" />
         <polygon points="60 20 95 50 60 37 25 50" fill="white" />
       </svg>

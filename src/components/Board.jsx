@@ -1,5 +1,5 @@
 import React from 'react'
-import '../style.css';
+import './main.css';
 import Tile from './Tile.jsx';
 import Harbor from './Harbor.jsx';
 
