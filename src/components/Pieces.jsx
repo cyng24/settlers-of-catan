@@ -6,76 +6,45 @@ import Crossroad from './Crossroad.jsx';
 
   const Pieces = (props) => {
     return (
-      <div className="absolute">
-        <div className="margin-40">
-          <span className="row piece">
+      <div className="abs-80">
+        <div className="margin-topRow">
+          <span className="d-flex justify-content-center piece">
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
           </span>
-          <span className="row piece">
+          <span className="d-flex justify-content-center piece margin--5">
             <Crossroad direction={["left", "right"]} />
             <Crossroad direction={["left", "right"]} />
             <Crossroad direction={["left", "right"]} />
           </span>
-          <span className="row piece margin--20">
-            <City addCity={props.addCity}/>
-            <City addCity={props.addCity}/>
-            <City addCity={props.addCity}/>
-            <City addCity={props.addCity}/>
-          </span>
-        </div>
-        <span className="row">
-          <Road direction="up" />
-          <Road direction="up" />
-          <Road direction="up" />
-          <Road direction="up" />
-        </span>
-        <div className="margin-10">
-          <span className="row piece">
-            <City addCity={props.addCity}/>
-            <City addCity={props.addCity}/>
-            <City addCity={props.addCity}/>
-            <City addCity={props.addCity}/>
-          </span>
-          <span className="row piece">
-            <Crossroad direction={["left", "right"]} />
-            <Crossroad direction={["left", "right"]} />
-            <Crossroad direction={["left", "right"]} />
-            <Crossroad direction={["left", "right"]} />
-          </span>
-          <span className="row piece margin--20">
-            <City addCity={props.addCity}/>
+          <span className="d-flex justify-content-center piece margin--3">
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
           </span>
         </div>
-        <span className="row">
-          <Road direction="up" />
+        <span className="d-flex justify-content-center">
           <Road direction="up" />
           <Road direction="up" />
           <Road direction="up" />
           <Road direction="up" />
         </span>
-        <div className="margin-10">
-          <span className="row piece">
-            <City addCity={props.addCity}/>
+        <div className="margin-row">
+          <span className="d-flex justify-content-center piece">
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
           </span>
-          <span className="row piece">
-            <Crossroad direction={["left", "right"]} />
+          <span className="d-flex justify-content-center piece margin--5">
             <Crossroad direction={["left", "right"]} />
             <Crossroad direction={["left", "right"]} />
             <Crossroad direction={["left", "right"]} />
             <Crossroad direction={["left", "right"]} />
           </span>
-          <span className="row piece margin--20">
-            <City addCity={props.addCity}/>
+          <span className="d-flex justify-content-center piece margin--3">
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
@@ -83,31 +52,30 @@ import Crossroad from './Crossroad.jsx';
             <City addCity={props.addCity}/>
           </span>
         </div>
-        <span className="row">
-          <Road direction="up" />
+        <span className="d-flex justify-content-center">
           <Road direction="up" />
           <Road direction="up" />
           <Road direction="up" />
           <Road direction="up" />
           <Road direction="up" />
         </span>
-        <div className="margin-10">
-          <span className="row piece">
-            <City addCity={props.addCity}/>
+        <div className="margin-row">
+          <span className="d-flex justify-content-center piece">
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
           </span>
-          <span className="row piece">
-            <Crossroad direction={["right", "left"]} />
-            <Crossroad direction={["right", "left"]} />
-            <Crossroad direction={["right", "left"]} />
-            <Crossroad direction={["right", "left"]} />
-            <Crossroad direction={["right", "left"]} />
+          <span className="d-flex justify-content-center piece margin--5">
+            <Crossroad direction={["left", "right"]} />
+            <Crossroad direction={["left", "right"]} />
+            <Crossroad direction={["left", "right"]} />
+            <Crossroad direction={["left", "right"]} />
+            <Crossroad direction={["left", "right"]} />
           </span>
-          <span className="row piece margin--20">
+          <span className="d-flex justify-content-center piece margin--3">
+            <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
@@ -115,53 +83,85 @@ import Crossroad from './Crossroad.jsx';
             <City addCity={props.addCity}/>
           </span>
         </div>
-        <span className="row">
+        <span className="d-flex justify-content-center">
+          <Road direction="up" />
           <Road direction="up" />
           <Road direction="up" />
           <Road direction="up" />
           <Road direction="up" />
           <Road direction="up" />
         </span>
-        <div className="margin-10">
-          <span className="row piece">
+        <div className="margin-row">
+          <span className="d-flex justify-content-center piece">
+            <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
           </span>
-          <span className="row piece">
+          <span className="d-flex justify-content-center piece margin--5">
+            <Crossroad direction={["right", "left"]} />
             <Crossroad direction={["right", "left"]} />
             <Crossroad direction={["right", "left"]} />
             <Crossroad direction={["right", "left"]} />
             <Crossroad direction={["right", "left"]} />
           </span>
-          <span className="row piece margin--20">
+          <span className="d-flex justify-content-center piece margin--3">
+            <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
           </span>
         </div>
-        <span className="row">
+        <span className="d-flex justify-content-center">
+          <Road direction="up" />
           <Road direction="up" />
           <Road direction="up" />
           <Road direction="up" />
           <Road direction="up" />
         </span>
-        <div className="margin-10">
-          <span className="row piece">
+        <div className="margin-row">
+          <span className="d-flex justify-content-center piece">
+            <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
           </span>
-          <span className="row piece">
+          <span className="d-flex justify-content-center piece margin--5">
+            <Crossroad direction={["right", "left"]} />
             <Crossroad direction={["right", "left"]} />
             <Crossroad direction={["right", "left"]} />
             <Crossroad direction={["right", "left"]} />
           </span>
-          <span className="row piece margin--20">
+          <span className="d-flex justify-content-center piece margin--3">
+            <City addCity={props.addCity}/>
+            <City addCity={props.addCity}/>
+            <City addCity={props.addCity}/>
+            <City addCity={props.addCity}/>
+          </span>
+        </div>
+        <span className="d-flex justify-content-center">
+          <Road direction="up" />
+          <Road direction="up" />
+          <Road direction="up" />
+          <Road direction="up" />
+        </span>
+        <div className="margin-row">
+          <span className="d-flex justify-content-center piece">
+            <City addCity={props.addCity}/>
+            <City addCity={props.addCity}/>
+            <City addCity={props.addCity}/>
+            <City addCity={props.addCity}/>
+          </span>
+          <span className="d-flex justify-content-center piece margin--5">
+            <Crossroad direction={["right", "left"]} />
+            <Crossroad direction={["right", "left"]} />
+            <Crossroad direction={["right", "left"]} />
+          </span>
+          <span className="d-flex justify-content-center piece margin--3">
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>
             <City addCity={props.addCity}/>

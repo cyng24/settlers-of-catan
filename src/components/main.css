@@ -18,28 +18,28 @@
   outline: transparent;
 }
 
-.absolute {
+.abs-80 {
   position: absolute;
   width: 80%;
 }
-.relative {
-  position: relative;
-}
 
-.margin-40 {
-  margin-top: 37px;
+.margin-topRow {
+  margin-top: 58px;
 }
-.margin-10 {
-  margin-top: 11px;
+.margin-row {
+  margin-top: 10px;
 }
-.margin--20 {
-  margin-top: -22px;
+.margin--3 {
+  margin-top: -3px;
+}
+.margin--5 {
+  margin-top: -5px;
 }
 .tile-half {
-  width: 55px;
+  width: 74px;
 }
 .tile-full {
-  width: 110px;
+  width: 150px;
 }
 
 button {
@@ -62,7 +62,7 @@ button {
     margin: 10px 10px 0px 0px;
   }
 
-  .absolute {
+  .abs-80 {
     top: 110px;
     width: 100%;
   }

@@ -39,21 +39,21 @@ export default class Board extends React.Component {
     
   render() {
     return (
-      <div className="absolute">
-        <span className="row board">
+      <div className="abs-80">
+        <span className="d-flex justify-content-center board">
           <Harbor type={null}/>
           <Harbor type={this.state.harbors[0]}/>
           <Harbor type={null}/>
           <Harbor type={this.state.harbors[1]}/>
         </span>
-        <span className="row board">
+        <span className="d-flex justify-content-center board">
           <Harbor type={this.state.harbors[2]}/>
           <Tile type={this.state.types[0]} value={this.state.values[0]}/>
           <Tile type={this.state.types[1]} value={this.state.values[1]}/>
           <Tile type={this.state.types[2]} value={this.state.values[2]}/>
           <Harbor type={null}/>
         </span>
-        <span className="row board">
+        <span className="d-flex justify-content-center board">
           <Harbor type={null}/>
           <Tile type={this.state.types[3]} value={this.state.values[3]}/>
           <Tile type={this.state.types[4]} value={this.state.values[4]}/>
@@ -61,7 +61,7 @@ export default class Board extends React.Component {
           <Tile type={this.state.types[6]} value={this.state.values[6]}/>
           <Harbor type={this.state.harbors[3]}/>
         </span>
-        <span className="row board">
+        <span className="d-flex justify-content-center board">
           <Harbor type={this.state.harbors[4]}/>
           <Tile type={this.state.types[7]} value={this.state.values[7]}/>
           <Tile type={this.state.types[8]} value={this.state.values[8]}/>
@@ -70,7 +70,7 @@ export default class Board extends React.Component {
           <Tile type={this.state.types[11]} value={this.state.values[11]}/>
           <Harbor type={null}/>
         </span>
-        <span className="row board">
+        <span className="d-flex justify-content-center board">
           <Harbor type={null}/>
           <Tile type={this.state.types[12]} value={this.state.values[12]}/>
           <Tile type={this.state.types[13]} value={this.state.values[13]}/>
@@ -78,14 +78,14 @@ export default class Board extends React.Component {
           <Tile type={this.state.types[15]} value={this.state.values[15]}/>
           <Harbor type={this.state.harbors[5]}/>
         </span>
-        <span className="row board">
+        <span className="d-flex justify-content-center board">
           <Harbor type={this.state.harbors[6]}/>
           <Tile type={this.state.types[16]} value={this.state.values[16]}/>
           <Tile type={this.state.types[17]} value={this.state.values[17]}/>
           <Tile type={this.state.types[18]} value={this.state.values[18]}/>
           <Harbor type={null}/>
         </span>
-        <span className="row board">
+        <span className="d-flex justify-content-center board">
           <Harbor type={null}/>
           <Harbor type={this.state.harbors[7]}/>
           <Harbor type={null}/>
