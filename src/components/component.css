@@ -1,24 +1,20 @@
 .board {
-    margin-top: -40px;
+    margin-top: -30px;
 }
 
 .piece {
-    height: 23px;
+    height: 35px;
 }
 
 .button-city {
     display: grid;
     position: absolute;
-    left:37%;
+    left:36%;
 }
 
 .rotate-right {
-    transform: rotate(27deg);
+    transform: rotate(117deg);
 }
 .rotate-left {
-    transform: rotate(-27deg);
-}
-.rotate-up {
-    transform: rotate(90deg);
-    margin-top: 15px !important;
+    transform: rotate(-117deg);
 }

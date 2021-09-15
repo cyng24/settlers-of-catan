@@ -1,12 +1,13 @@
 import React from 'react';
 import './component.css';
 
-const tileSize = 150;
+const tileSize = 120;
 const margin = 4;
 const polygonPoints = `${0+margin} ${((tileSize/3)-10)+(margin/2)} ${tileSize/2} ${0+margin} ${tileSize-margin} ${((tileSize/3)-10)+(margin/2)} ${tileSize-margin} ${(2*(tileSize/3)+10)-(margin/2)} ${tileSize/2} ${tileSize-margin} ${0+margin} ${(2*(tileSize/3)+10)-(margin/2)}`;
+const fontSize = `${tileSize/8}px`
 
 const Tile = (props) => {
-  const textX = props.value > 9 ? tileSize/2 - 15 : tileSize/2 - 10;
+  const textX = props.value > 9 ? tileSize/2 - 9 : tileSize/2 - 5;
   const color = (props.type) ? Object.keys(props.type)[0] : null;
   const hex = (props.type) ? props.type[color] : null;
   const forest = (
@@ -22,7 +23,7 @@ const Tile = (props) => {
 
           <polygon points={polygonPoints} fill="url(#p-tree)"/>
           <circle cx={tileSize/2} cy={tileSize/2} r={tileSize/6} fill="white" />
-          <text x={textX} y={tileSize/2 + 10} fontWeight="bold" fontSize="30px" fill="black">{props.value}</text>
+          <text x={textX} y={tileSize/2 + 5} fontWeight="bold" fontSize={fontSize} fill="black">{props.value}</text>
         </svg>
     </React.Fragment>     
   );
@@ -40,7 +41,7 @@ const Tile = (props) => {
 
           <polygon points={polygonPoints} fill="url(#p-mtn)"/>
           <circle cx={tileSize/2} cy={tileSize/2} r={tileSize/6} fill="white" />
-          <text x={textX} y={tileSize/2 + 10} fontWeight="bold" fontSize="30px" fill="black">{props.value}</text>
+          <text x={textX} y={tileSize/2 + 5} fontWeight="bold" fontSize={fontSize} fill="black">{props.value}</text>
         </svg>
     </React.Fragment>     
   );
@@ -56,7 +57,7 @@ const Tile = (props) => {
 
           <polygon points={polygonPoints} fill="url(#p-hill)"/>
           <circle cx={tileSize/2} cy={tileSize/2} r={tileSize/6} fill="white" />
-          <text x={textX} y={tileSize/2 + 10} fontWeight="bold" fontSize="30px" fill="black">{props.value}</text>
+          <text x={textX} y={tileSize/2 + 5} fontWeight="bold" fontSize={fontSize} fill="black">{props.value}</text>
         </svg>
     </React.Fragment>     
   );
@@ -76,7 +77,7 @@ const Tile = (props) => {
 
           <polygon points={polygonPoints} fill="url(#p-field)"/>
           <circle cx={tileSize/2} cy={tileSize/2} r={tileSize/6} fill="white" />
-          <text x={textX} y={tileSize/2 + 10} fontWeight="bold" fontSize="30px" fill="black">{props.value}</text>
+          <text x={textX} y={tileSize/2 + 5} fontWeight="bold" fontSize={fontSize} fill="black">{props.value}</text>
         </svg>
     </React.Fragment>     
   );
@@ -100,7 +101,7 @@ const Tile = (props) => {
 
           <polygon points={polygonPoints} fill="url(#p-pasture)"/>
           <circle cx={tileSize/2} cy={tileSize/2} r={tileSize/6} fill="white" />
-          <text x={textX} y={tileSize/2 + 10} fontWeight="bold" fontSize="30px" fill="black">{props.value}</text>
+          <text x={textX} y={tileSize/2 + 5} fontWeight="bold" fontSize={fontSize} fill="black">{props.value}</text>
         </svg>
     </React.Fragment>     
   );
@@ -110,7 +111,7 @@ const Tile = (props) => {
         <svg width={tileSize} height={tileSize}>
           <polygon points={polygonPoints} fill={hex}/>
           <circle cx={tileSize/2} cy={tileSize/2} r={tileSize/6} fill="white" />
-          <text x={textX} y={tileSize/2 + 10} fontWeight="bold" fontSize="30px" fill="black">{props.value}</text>
+          <text x={textX} y={tileSize/2 + 5} fontWeight="bold" fontSize={fontSize} fill="black">{props.value}</text>
         </svg>
     </React.Fragment>     
   );

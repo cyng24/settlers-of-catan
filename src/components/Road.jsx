@@ -7,7 +7,10 @@ const yellow = '#f9c119';
 const blue = '#1919ff';
 const colors = ['none', red, blue, yellow, green];
 
-const tileSize = 150;
+const tileSize = 120;
+const width = (tileSize/5)-10;
+const height = (tileSize/5)+10
+const polygonPoints = `0 0 ${width} 0 ${width} ${height} 0 ${height}`;
 
 const Road = (props) => {
   const divClass = "d-flex justify-content-center tile-".concat(props.direction === "up" ? "full" : "half");
@@ -22,8 +25,8 @@ const Road = (props) => {
   return (
     <div className={divClass}>
       <button className={roadClass} onClick={toggleColor}>
-          <svg width="40" height="20">
-              <polygon points="0 0 40 0 40 20 0 20" stroke="white" fill={colors[roadColor]}/>
+          <svg width={width} height={height}>
+              <polygon points={polygonPoints} stroke="white" fill={colors[roadColor]}/>
           </svg>
       </button>
     </div>

@@ -39,7 +39,7 @@ export default class Board extends React.Component {
     
   render() {
     return (
-      <div className="abs-80">
+      <div className="board-placement">
         <span className="d-flex justify-content-center board">
           <Harbor type={null}/>
           <Harbor type={this.state.harbors[0]}/>

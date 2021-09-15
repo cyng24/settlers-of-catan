@@ -7,7 +7,7 @@ const yellow = '#f2b706';
 const blue = '#1919ff';
 const colors = ['none', red, blue, yellow, green];
 
-const tileSize = 150;
+const tileSize = 120;
 const citySize = tileSize/6;
 const cityPoints = `${citySize/2} ${(citySize/2)-10} ${(citySize/2)-10} ${(citySize/2)+5} ${(citySize/2)+10} ${(citySize/2)+5}`;
 

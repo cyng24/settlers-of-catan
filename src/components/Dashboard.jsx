@@ -9,10 +9,10 @@ const Dashboard = (props) => {
     <div className="dashboard">
       <div className="d-flex">
         <button className="button-dash" onClick={console.log('ROLL')}>
-          <span class="material-icons">casino</span>
+          <span className="material-icons">casino</span>
         </button>
         <button className={cityActive} onClick={props.cityToggle}>
-          <span class="material-icons">location_city</span>
+          <span className="material-icons">location_city</span>
         </button>
       </div>
       <svg className="margin-row" width="100%" height="60">
