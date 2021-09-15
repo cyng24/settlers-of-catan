@@ -11,7 +11,7 @@
 .button-dash {
   border: solid 2px lightgray;
   border-radius: 12px;
-  margin: 10px 0px 0px 0px;
+  line-height: normal;
 }
 .active {
   background-color: lightgray;

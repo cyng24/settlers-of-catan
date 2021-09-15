@@ -9,7 +9,7 @@ const colors = ['none', red, blue, yellow, green];
 
 const tileSize = 120;
 const citySize = tileSize/6;
-const cityPoints = `${citySize/2} ${(citySize/2)-10} ${(citySize/2)-10} ${(citySize/2)+5} ${(citySize/2)+10} ${(citySize/2)+5}`;
+const cityPoints = `${citySize/2} ${(citySize/2)-6} ${(citySize/2)-6} ${(citySize/2)+4} ${(citySize/2)+6} ${(citySize/2)+4}`;
 
 const City = (props) => {
   let [settlementColor, changeSettlementColor] = useState(0);
