@@ -1,5 +1,5 @@
 import React from 'react';
-import './component.css';
+import './styles/component.css';
 import Forest from './patterns/Forest.jsx';
 import Mountain from './patterns/Mountain.jsx';
 import Hill from './patterns/Hill.jsx';

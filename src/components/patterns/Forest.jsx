@@ -8,10 +8,11 @@ const Forest = (props) => {
       <React.Fragment>
         <svg width={width} height={height}>
           <defs>
-            <pattern id="p-tree" x="0" y="0" width=".3" height=".3">
-              <rect x="0" y="0" width="50" height="35" fill={props.hex}/>
-              <polygon points="20 0 35 15 20 10 5 15" fill="white" />
-              <polygon points="20 10 40 30 20 22 0 30" fill="white" />
+            <pattern id="p-tree" x="0" y="0" width=".3" height=".4">
+              <rect x="0" y="0" width="50" height="50" fill={props.hex}/>
+              <polygon points="15 0 27 15 15 10 3 15" fill="white" />
+              <polygon points="15 10 30 30 15 22 0 30" fill="white" />
+              <rect x="12" y="20" width="5" height="10" fill="white" />
             </pattern>
           </defs>
 

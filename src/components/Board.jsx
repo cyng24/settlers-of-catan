@@ -1,5 +1,5 @@
 import React from 'react'
-import './main.css';
+import './styles/main.css';
 import Tile from './Tile.jsx';
 import Harbor from './Harbor.jsx';
 
@@ -15,10 +15,10 @@ export default class Board extends React.Component {
   }
   
   componentDidMount() {
-    const { green, red, yellow, brown, gray } = this.state.colors;
-    const tileTypes = [{ red }, { red }, { red }, { brown }, { brown }, { brown }, { brown }, { gray }, { gray }, { gray }, { yellow }, { yellow }, { yellow }, { yellow }, { green }, { green }, { green }, { green }, null]
+    const { green, red, yellow, brown, gray, blue } = this.state.colors;
+    const tileTypes = [{ red }, { red }, { red }, { brown }, { brown }, { brown }, { brown }, { gray }, { gray }, { gray }, { yellow }, { yellow }, { yellow }, { yellow }, { green }, { green }, { green }, { green }, { blue }]
     const tileValues = [2, 3, 3, 4, 4, 5, 5, 6, 6, 8, 8, 9, 9, 10, 10, 11, 11, 12, "Ü"];
-    const harborTypes = [`${red}|2:1`, `${brown}|2:1`, `${gray}|2:1`, `${yellow}|2:1`, `${green}|2:1`, '?|3:1', '?|3:1', '?|3:1', '?|3:1'];
+    const harborTypes = [`${red}|2:1`, `${brown}|2:1`, `${gray}|2:1`, `${yellow}|2:1`, `${green}|2:1`, `${blue}|3:1`, `${blue}|3:1`, `${blue}|3:1`, `${blue}|3:1`];
     let types = this.randomize(tileTypes);
     let values = this.randomize(tileValues);
     let harbors = this.randomize(harborTypes);

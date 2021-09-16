@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './component.css';
+import './styles/component.css';
 
 const green = '#009900';
 const red = '#cc0000';
@@ -9,7 +9,6 @@ const colors = ['none', red, blue, yellow, green];
 
 const tileSize = 120;
 const citySize = tileSize/6;
-const cityPoints = `${citySize/2} ${(citySize/2)-6} ${(citySize/2)-6} ${(citySize/2)+4} ${(citySize/2)+6} ${(citySize/2)+4}`;
 
 const City = (props) => {
   let [settlementColor, changeSettlementColor] = useState(0);
@@ -26,15 +25,13 @@ const City = (props) => {
   return (
     <div className="tile-full">
       <div className="position-relative">
-        <button className="button-city">
+        <button className="button-house">
           <svg width={citySize} height={citySize}>
               <circle cx={citySize/2} cy={citySize/2} r={citySize/2} stroke="white" fill={colors[settlementColor]} />
           </svg>
         </button>
-        <button  className="button-city" onClick={props.addCity ? toggleCity : toggleColor}>
-          <svg width={citySize} height={citySize}>
-              <polygon points={cityPoints} stroke="none" fill={isCity ? "white" : "none"}/>
-          </svg>
+        <button className="button-house city-icon" style={{width: tileSize/4 + 'px'}} onClick={props.addCity ? toggleCity : toggleColor}>
+          <span className={"material-icons md-16 " + (isCity ? "md-white" : "transparent")}>location_city</span>
         </button>
       </div>
     </div>

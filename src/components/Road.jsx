@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './component.css';
+import './styles/component.css';
 
 const green = '#009900';
 const red = '#cc0000';

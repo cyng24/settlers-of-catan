@@ -5,7 +5,7 @@
 .dashboard {
   display: flex;
   flex-direction: column;
-  width: 15%;
+  width: 18%;
 }
 
 .button-dash {
@@ -20,7 +20,7 @@
 
 .board-placement {
   position: absolute;
-  width: 90%;
+  width: 75%;
 }
 
 .margin-topRow {
@@ -49,6 +49,10 @@ button {
   border: none;
 }
 
+.transparent {
+  color: transparent;
+}
+
 @media (max-width: 900px) {
   .game {
     display: block;
@@ -66,7 +70,7 @@ button {
 
   .board-placement {
     top: 110px;
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -74,7 +78,7 @@ button {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 50px;
+  font-size: 24px;
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -94,3 +98,6 @@ button {
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+.material-icons.md-16 { font-size: 16px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-white { color: white; }
