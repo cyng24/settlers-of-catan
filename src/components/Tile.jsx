@@ -17,45 +17,67 @@ const Tile = (props) => {
   const color = (props.type) ? Object.keys(props.type)[0] : null;
   const hex = (props.type) ? props.type[color] : null;
 
+  function placeRobber() {
+    console.log('ROBBER')
+  };
+
   if (color === 'gray') {
     return (
       <div>
-        <Mountain tileSize={tileSize} polygonPoints={polygonPoints} fontSize={fontSize} textX={textX} hex={hex} value={props.value} />
+        <button className={props.value ? "d-none" : "button-robber"} onClick={placeRobber}>
+          <span className="material-icons md-40">face</span>
+        </button>
+        <Mountain tileSize={tileSize} polygonPoints={polygonPoints} fontSize={fontSize} textX={textX} hex={hex} value={props.value} diceRoll={props.diceRoll} />
       </div>
     )
   }
   else if (color === 'brown') {
     return (
       <div>
-        <Forest tileSize={tileSize} polygonPoints={polygonPoints} fontSize={fontSize} textX={textX} hex={hex} value={props.value} />
+        <button className={props.value ? "d-none" : "button-robber"} onClick={placeRobber}>
+          <span className="material-icons md-40">face</span>
+        </button>
+        <Forest tileSize={tileSize} polygonPoints={polygonPoints} fontSize={fontSize} textX={textX} hex={hex} value={props.value} diceRoll={props.diceRoll} />
       </div>
     )
   }
   else if (color === 'red') {
     return (
       <div>
-        <Hill tileSize={tileSize} polygonPoints={polygonPoints} fontSize={fontSize} textX={textX} hex={hex} value={props.value} />
+        <button className={props.value ? "d-none" : "button-robber"} onClick={placeRobber}>
+          <span className="material-icons md-40">face</span>
+        </button>
+        <Hill tileSize={tileSize} polygonPoints={polygonPoints} fontSize={fontSize} textX={textX} hex={hex} value={props.value} diceRoll={props.diceRoll} />
       </div>
     )
   }
   else if (color === 'yellow') {
     return (
       <div>
-        <Field tileSize={tileSize} polygonPoints={polygonPoints} fontSize={fontSize} textX={textX} hex={hex} value={props.value} />
+        <button className={props.value ? "d-none" : "button-robber"} onClick={placeRobber}>
+          <span className="material-icons md-40">face</span>
+        </button>
+        <Field tileSize={tileSize} polygonPoints={polygonPoints} fontSize={fontSize} textX={textX} hex={hex} value={props.value} diceRoll={props.diceRoll} />
       </div>
     )
   }
   else if (color === 'green') {
     return (
       <div>
-        <Pasture tileSize={tileSize} polygonPoints={polygonPoints} fontSize={fontSize} textX={textX} hex={hex} value={props.value} />
+        <button className={props.value ? "d-none" : "button-robber"} onClick={placeRobber}>
+          <span className="material-icons md-40">face</span>
+        </button>
+        <Pasture tileSize={tileSize} polygonPoints={polygonPoints} fontSize={fontSize} textX={textX} hex={hex} value={props.value} diceRoll={props.diceRoll} />
       </div>
     )
   }
   else {
     return (
       <div>
-        <Desert tileSize={tileSize} polygonPoints={polygonPoints} fontSize={fontSize} textX={textX} hex={hex} value={props.value} />
+        <button className={props.value ? "d-none" : "button-robber"} onClick={placeRobber}>
+          <span className="material-icons md-40">face</span>
+        </button>
+        <Desert tileSize={tileSize} polygonPoints={polygonPoints} fontSize={fontSize} textX={textX} hex={hex} value={props.value} diceRoll={props.diceRoll} />
       </div>
     )
   }

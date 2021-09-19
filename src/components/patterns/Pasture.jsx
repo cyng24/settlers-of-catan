@@ -22,8 +22,23 @@ const Pasture = (props) => {
           </defs>
 
           <polygon points={polygonPoints} fill="url(#p-pasture)"/>
-          <circle cx={width/2} cy={height/2} r={width/6} fill="white" />
-          <text x={textX} y={height/2 + 5} fontWeight="bold" fontSize={fontSize} fill="black">{props.value}</text>
+          <circle 
+            cx={width/2} 
+            cy={height/2} 
+            r={width/6} 
+            fill={props.value === props.diceRoll ? props.hex : "white"} 
+            stroke={props.value === props.diceRoll ? "white" : ""} 
+            stroke-width={5}
+          />
+          <text 
+            x={textX} 
+            y={height/2 + 5} 
+            fontWeight="bold" 
+            fontSize={fontSize} 
+            fill={props.value === props.diceRoll ? "white" : "black"}
+          >
+            {props.value}
+          </text>
         </svg>
       </React.Fragment>  
     )
