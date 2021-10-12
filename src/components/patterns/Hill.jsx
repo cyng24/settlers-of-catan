@@ -20,7 +20,7 @@ const Hill = (props) => {
             r={width/6}
             fill={props.value === props.diceRoll ? props.hex : "white"} 
             stroke={props.value === props.diceRoll ? "white" : ""} 
-            stroke-width={5}
+            strokeWidth={5}
           />
           <text 
             x={textX} 

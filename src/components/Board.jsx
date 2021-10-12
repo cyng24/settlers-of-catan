@@ -22,6 +22,7 @@ export default class Board extends React.Component {
     let types = this.randomize(tileTypes);
     let values = this.randomize(tileValues);
     let harbors = this.randomize(harborTypes);
+    // let desertIndex = values.indexOf(null);
     this.setState({ types, values, harbors });
   }
 

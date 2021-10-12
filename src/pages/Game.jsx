@@ -1,6 +1,7 @@
 import React from 'react'
 import '../components/styles/main.css';
 import Dashboard from '../components/Dashboard.jsx'
+import RobberBoard from '../components/RobberBoard.jsx'
 import Board from '../components/Board.jsx'
 import Pieces from '../components/Pieces.jsx'
 
@@ -38,6 +39,7 @@ export default class Game extends React.Component {
       <div className="game">
         <Dashboard colors={this.state.colors} windowWidth={this.state.windowWidth} cityToggle={this.changeCityState} addCity={this.state.addCity} roll={this.roll} diceRoll={this.state.diceRoll} />
         <div>
+          <RobberBoard />
           <Board colors={this.state.colors} diceRoll={this.state.diceRoll} />
           <Pieces addCity={this.state.addCity} />
         </div>
