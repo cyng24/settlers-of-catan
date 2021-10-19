@@ -1,11 +1,18 @@
-<p align="center">
+TO DO ::
+
+1. Implement Redux to save board configuration
+2. Place robber in desert and move robber correctly
+3. Implement Development cards
+4. Add css :hover to Resource cards
+
+<!-- <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
   Gatsby minimal starter
-</h1>
+</h1> -->
 
 ## 🚀 Quick start
 

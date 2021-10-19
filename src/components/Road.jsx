@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import './styles/component.css';
-
-const green = '#009900';
-const red = '#cc0000';
-const yellow = '#f9c119';
-const blue = '#1919ff';
-const colors = ['none', red, blue, yellow, green];
 
 const tileSize = 120;
 const width = (tileSize/5)-10;
@@ -26,11 +21,17 @@ const Road = (props) => {
     <div className={divClass}>
       <button className={roadClass} onClick={toggleColor}>
           <svg width={width} height={height}>
-              <polygon points={polygonPoints} stroke="white" fill={colors[roadColor]}/>
+              <polygon points={polygonPoints} stroke="white" fill={props.colors[roadColor]}/>
           </svg>
       </button>
     </div>
   )
 }
 
-export default Road;
+const mapState = (state) => {
+  return {
+    colors: state.cityColors,
+  };
+};
+
+export default connect(mapState)(Road);

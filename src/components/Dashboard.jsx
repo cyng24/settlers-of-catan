@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles/main.css';
+import { connect } from 'react-redux';
 import Card from './Card.jsx';
 import Forest from './patterns/Forest.jsx';
 import Mountain from './patterns/Mountain.jsx';
@@ -7,7 +8,7 @@ import Hill from './patterns/Hill.jsx';
 import Field from './patterns/Field.jsx';
 import Pasture from './patterns/Pasture.jsx';
 
-export default class Dashboard extends React.Component {
+class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -71,3 +72,11 @@ export default class Dashboard extends React.Component {
     </div>
   )}
 }
+
+const mapState = (state) => {
+  return {
+    colors: state.tileColors
+  };
+};
+
+export default connect(mapState)(Dashboard);
