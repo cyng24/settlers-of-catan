@@ -78,7 +78,6 @@ const mapState = (state) => {
     types: state.types,
     values: state.values,
     harbors: state.harbors,
-    colors: state.tileColors,
   };
 };
 

@@ -1,5 +1,4 @@
-import { createStore } from 'redux'
-// import axios from 'axios';
+import { createStore as reduxCreateStore } from "redux"
 
 const tileGreen = '#759d75';
 const tileRed = '#ae5d5d';
@@ -37,38 +36,14 @@ function randomize(val) {
     return randomArray;
 }
 
-const appReducer = (state = initialState, action) => {
+const reducer = (state, action) => {
+    // if (action.type === `INCREMENT`) {
+    //     return Object.assign({}, state, {
+    //       count: state.count + 1,
+    //     })
+    //   }
     return state;
 }
 
-// export function getSomething (thing) {
-//     return { type: 'GET_THING', thing }
-// }
-
-// export function addSomething (newThing) {
-//     return { type: 'ADD_THING', newThing: {name: newThing} }
-// }
-
-// export function fetchSomething() {
-//     return (dispatch) => {
-//         return axios.get('/api/thing')
-//         .then(res => res.data)
-//         .then(thing => {
-//             return dispatch(getSomething(thing));
-//         })
-//         .catch((err) => {console.log(err)});
-//     };
-// }
-
-// export function postSomething(thing) {
-//     return (dispatch) => {
-//         return axios.post('/api/thing/', thing)
-//         .then(res => res.data)
-//         .then(newThing => {
-//             return dispatch(addSomething(newThing));
-//         })
-//         .catch( (err) => {console.trace(err)});
-//     }
-// }
-
-export default createStore(appReducer)
+const createStore = () => reduxCreateStore(reducer, initialState)
+export default createStore

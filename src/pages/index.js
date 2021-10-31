@@ -1,14 +1,8 @@
 import * as React from "react"
-import { Provider } from 'react-redux'
-import store from './store'
-import Game from './Game.jsx'
+import Game from '../components/Game.jsx'
 
-function App() {
-  return (
-    <Provider store={store}>
-      <Game />
-    </Provider>
-  );
-}
+const App = () => (
+  <Game />
+)
 
 export default App;
