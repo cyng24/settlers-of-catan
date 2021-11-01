@@ -1,9 +1,9 @@
 import React from 'react'
 import '../components/styles/main.css';
-import Dashboard from '../components/Dashboard.jsx'
-import RobberBoard from '../components/RobberBoard.jsx'
-import Board from '../components/Board.jsx'
-import Pieces from '../components/Pieces.jsx'
+import Dashboard from './Dashboard.jsx'
+import Robber from './Robber.jsx'
+import Board from './Board.jsx'
+import Pieces from './Pieces.jsx'
 
 export default class Game extends React.Component {
   constructor(props) {
@@ -31,7 +31,7 @@ export default class Game extends React.Component {
       <div className="game">
         <Dashboard cityToggle={this.changeCityState} addCity={this.state.addCity} roll={this.roll} diceRoll={this.state.diceRoll} />
         <div>
-          <RobberBoard />
+          <Robber />
           <Board diceRoll={this.state.diceRoll} />
           <Pieces addCity={this.state.addCity} />
         </div>

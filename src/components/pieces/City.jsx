@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import '../styles/component.css';
 
-const tileSize = 120;
-const citySize = tileSize/6;
-
 const City = (props) => {
+  const citySize = props.tileSize/6;
+
   let [settlementColor, changeSettlementColor] = useState(0);
   const toggleColor = () => {
       settlementColor = settlementColor === 4 ? 0 : settlementColor+1;
@@ -25,7 +24,7 @@ const City = (props) => {
               <circle cx={citySize/2} cy={citySize/2} r={citySize/2} stroke="white" fill={props.colors[settlementColor]} />
           </svg>
         </button>
-        <button className="button-house city-icon" style={{width: tileSize/4 + 'px'}} onClick={props.addCity ? toggleCity : toggleColor}>
+        <button className="button-house city-icon" style={{width: props.tileSize/4 + 'px'}} onClick={props.addCity ? toggleCity : toggleColor}>
           <span className={"material-icons md-16 " + (isCity ? "md-white" : "transparent")}>location_city</span>
         </button>
       </div>
@@ -36,6 +35,7 @@ const City = (props) => {
 const mapState = (state) => {
   return {
     colors: state.cityColors,
+    tileSize: state.tileProps.size
   };
 };
 
