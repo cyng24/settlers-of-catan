@@ -1,27 +1,28 @@
 import React from 'react';
 
 const Desert = (props) => {
-    const { tileSize, polygonPoints, fontSize, textX } = props;
+  const { textX, value, hex, diceRoll } = props;
+  const { polygonPoints, fontSize, size } = props.tileProps;
     return (
       <React.Fragment>
-        <svg width={tileSize} height={tileSize}>
-          <polygon points={polygonPoints} fill={props.hex}/>
+        <svg width={size} height={size}>
+          <polygon points={polygonPoints} fill={hex}/>
           <circle 
-            cx={tileSize/2} 
-            cy={tileSize/2} 
-            r={tileSize/6}
-            fill={props.value === props.diceRoll ? props.hex : "white"} 
-            stroke={props.value === props.diceRoll ? "white" : ""} 
+            cx={size/2} 
+            cy={size/2} 
+            r={size/6}
+            fill={value === diceRoll ? hex : "white"} 
+            stroke={value === diceRoll ? "white" : ""} 
             strokeWidth={5}
           />
           <text 
             x={textX} 
-            y={tileSize/2 + 5} 
+            y={size/2 + 5} 
             fontWeight="bold" 
             fontSize={fontSize} 
-            fill={props.value === props.diceRoll ? "white" : "black"}
+            fill={value === diceRoll ? "white" : "black"}
           >
-            {props.value}
+            {value}
           </text>
         </svg>
       </React.Fragment> 

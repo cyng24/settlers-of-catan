@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/component.css';
+import '../styles/component.css';
 
 const tileSize = 120;
 const fontSize = `${tileSize/10}px`;

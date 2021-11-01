@@ -1,8 +1,8 @@
 import React from 'react'
 import './styles/main.css';
-import City from './City.jsx';
-import Road from './Road.jsx';
-import Crossroad from './Crossroad.jsx';
+import City from './pieces/City.jsx';
+import Road from './pieces/Road.jsx';
+import Crossroad from './pieces/Crossroad.jsx';
 
   const Pieces = (props) => {
     return (

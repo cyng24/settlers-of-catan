@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import './styles/component.css';
+import '../styles/component.css';
 
 const tileSize = 120;
 const width = (tileSize/5)-10;

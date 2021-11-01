@@ -1,8 +1,8 @@
 import React from 'react'
 import './styles/main.css';
 import { connect } from 'react-redux';
-import Tile from './Tile.jsx';
-import Harbor from './Harbor.jsx';
+import Tile from './board/Tile.jsx';
+import Harbor from './board/Harbor.jsx';
 
 class Board extends React.Component {
   constructor(props) {

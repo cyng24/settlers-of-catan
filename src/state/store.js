@@ -16,7 +16,18 @@ const tileTypes = [{ red: tileRed }, { red: tileRed }, { red: tileRed }, { brown
 const tileValues = [2, 3, 3, 4, 4, 5, 5, 6, 6, 8, 8, 9, 9, 10, 10, 11, 11, 12, null];
 const harborTypes = [`${tileRed}|2:1`, `${tileBrown}|2:1`, `${tileGray}|2:1`, `${tileYellow}|2:1`, `${tileGreen}|2:1`, `${tileBlue}|3:1`, `${tileBlue}|3:1`, `${tileBlue}|3:1`, `${tileBlue}|3:1`];
 
+const tileSize = 120;
+const margin = 4;
+const tilePolygon = `${0+margin} ${((tileSize/3)-10)+(margin/2)} ${tileSize/2} ${0+margin} ${tileSize-margin} ${((tileSize/3)-10)+(margin/2)} ${tileSize-margin} ${(2*(tileSize/3)+10)-(margin/2)} ${tileSize/2} ${tileSize-margin} ${0+margin} ${(2*(tileSize/3)+10)-(margin/2)}`;
+const tileFontsize = `${tileSize/8}px`
+
+const cardSize = 80;
+const cardPolygon = `0 0 ${cardSize*2} 0 ${cardSize*2} ${cardSize} 0 ${cardSize}`;
+const cardFontsize = 15;
+
 const initialState = {
+    tileProps: { size: tileSize, polygonPoints: tilePolygon, fontSize: tileFontsize },
+    cardProps: { size: cardSize, polygonPoints: cardPolygon, fontSize: cardFontsize },
     tileColors: { green: tileGreen, red: tileRed, yellow: tileYellow, brown: tileBrown, gray: tileGray, blue: tileBlue },
     cityColors: ['none', cityRed, cityBlue, cityYellow, cityGreen],
     types: randomize(tileTypes),
