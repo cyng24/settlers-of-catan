@@ -1,8 +1,7 @@
 TO DO ::
 
-1. Fix server v client conflict
+1. Apply personal hand
 2. Implement Development cards
-3. Add css :hover to Resource cards
 
 ## 🚀 Quick start
 

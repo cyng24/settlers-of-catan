@@ -1,8 +1,10 @@
 import React from 'react';
 
 const Desert = (props) => {
-  const { textX, value, hex, diceRoll } = props;
+  const { value, hex, diceRoll } = props;
   const { polygonPoints, fontSize, size } = props.tileProps;
+  const textX = value > 9 ? size/2 - 9 :size/2 - 5;
+
     return (
       <React.Fragment>
         <svg width={size} height={size}>

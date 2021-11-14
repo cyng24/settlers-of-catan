@@ -30,11 +30,14 @@ export default class Game extends React.Component {
     return (
       <div className="game">
         <Dashboard cityToggle={this.changeCityState} addCity={this.state.addCity} roll={this.roll} diceRoll={this.state.diceRoll} />
-        <div>
-          <Robber />
-          <Board diceRoll={this.state.diceRoll} />
-          <Pieces addCity={this.state.addCity} />
-        </div>
+        {typeof window !== "undefined" ?
+          <div class="gameboard">
+            <Robber />
+            <Board diceRoll={this.state.diceRoll} />
+            <Pieces addCity={this.state.addCity} />
+          </div>
+          : null
+        }
       </div>
     )
   }
