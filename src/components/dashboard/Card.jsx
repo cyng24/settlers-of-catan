@@ -5,7 +5,7 @@ const Card = (props) => {
   const add = () => props.addCard(props.children.type.name);
 
   return (
-    <div className="d-flex mb-2">
+    <div className="d-flex">
       <button onClick={remove}>
         <span className="material-icons">remove_circle_outline</span>
       </button>

@@ -18,7 +18,7 @@ class Robber extends React.Component {
     
   render() {
     return (
-      <div className="board-placement" style={{paddingTop: "90px"}}>
+      <div className="board-placement" style={{paddingTop: this.props.tileSize*.75}}>
         <span className="d-flex justify-content-center board">
           <RobberFace index={0} robberIndex={this.state.robberIndex} changeRobber={this.changeRobber} />
           <RobberFace index={1} robberIndex={this.state.robberIndex} changeRobber={this.changeRobber} />
@@ -55,6 +55,7 @@ class Robber extends React.Component {
 
 const mapState = (state) => {
   return {
+    tileSize: state.tileProps.size,
     values: state.values,
   };
 };

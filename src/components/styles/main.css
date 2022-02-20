@@ -1,20 +1,11 @@
-.game {
-  display: flex;
-}
-
-.dashboard {
+.playerboard {
   display: flex;
   flex-direction: column;
-  width: 12%;
   align-items: center;
 }
 
-.gameboard {
-  position: static;
-  padding-top: 20px;
-}
-
 .button-dash {
+  margin-right: 5px;
   border: solid 2px lightgray;
   border-radius: 12px;
   line-height: normal;
@@ -74,23 +65,10 @@ button {
 }
 
 @media (max-width: 900px) {
-  .game {
-    display: block;
-  }
-
   .dashboard {
     display: flex;
     flex-direction: row;
     width: auto;
-  }
-
-  .button-dash {
-    margin: 10px 10px 0px 0px;
-  }
-
-  .board-placement {
-    top: 110px;
-    width: 100%;
   }
 }
 
@@ -122,3 +100,5 @@ button {
 .material-icons.md-30 { font-size: 30px; }
 .material-icons.md-40 { font-size: 40px; }
 .material-icons.md-white { color: white; }
+
+.dropdown-menu { min-width: 40px; }

@@ -21,13 +21,29 @@ const tileSize = 120;
 const tilePolygon = `${0+margin} ${((tileSize/3)-10)+(margin/2)} ${tileSize/2} ${0+margin} ${tileSize-margin} ${((tileSize/3)-10)+(margin/2)} ${tileSize-margin} ${(2*(tileSize/3)+10)-(margin/2)} ${tileSize/2} ${tileSize-margin} ${0+margin} ${(2*(tileSize/3)+10)-(margin/2)}`;
 const tileFontsize = tileSize/8;
 
-const cardSize = 90;
+const cardSize = 80;
 const cardPolygon = `${margin} ${margin} ${cardSize-margin} ${margin} ${cardSize-margin} ${cardSize-margin} ${margin} ${cardSize-margin}`;
 const cardFontsize = cardSize/6;
 
 const initialState = {
-    tileProps: { size: tileSize, polygonPoints: tilePolygon, fontSize: tileFontsize },
-    cardProps: { size: cardSize, polygonPoints: cardPolygon, fontSize: cardFontsize },
+    player: null,
+    tileProps: { 
+        size: tileSize, 
+        polygonPoints: tilePolygon, 
+        fontSize: tileFontsize 
+    },
+    cardProps: { 
+        size: cardSize, 
+        polygonPoints: cardPolygon, 
+        fontSize: cardFontsize
+    },
+    bankProps: { 
+        size: cardSize/1.5, 
+        fontSize: cardFontsize, 
+        values: { 
+            pasture: 19, field: 19, hill: 19, mountain: 19, forest: 19
+        }
+    },
     tileColors: { green: tileGreen, red: tileRed, yellow: tileYellow, brown: tileBrown, gray: tileGray, blue: tileBlue },
     cityColors: ['none', cityRed, cityBlue, cityYellow, cityGreen],
     types: randomize(tileTypes),
@@ -48,12 +64,21 @@ function randomize(val) {
 }
 
 const reducer = (state, action) => {
-    // if (action.type === `INCREMENT`) {
-    //     return Object.assign({}, state, {
-    //       count: state.count + 1,
-    //     })
-    //   }
-    return state;
+    switch(action.type) {
+      case 'changePlayer':
+        return Object.assign({}, state, {
+          player: action.player,
+        });
+      case 'useResource':
+        let bankProps = state.bankProps;
+        let prevValue = bankProps.values[action.resource];
+        bankProps.values[action.resource] = prevValue - action.value;
+        return Object.assign({}, state, {
+          bankProps,
+        })
+      default:
+        return state;
+    }
 }
 
 const createStore = () => reduxCreateStore(reducer, initialState)

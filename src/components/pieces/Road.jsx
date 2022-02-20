@@ -11,9 +11,9 @@ const Road = (props) => {
   const divClass = "d-flex justify-content-center tile-".concat(props.direction === "up" ? "full" : "half");
   const roadClass = "m-0 p-0 rotate-".concat(props.direction);
 
-  let [roadColor, changeRoadColor] = useState(0);
+  let [roadColor, changeRoadColor] = useState('none');
   const toggleColor = () => {
-      roadColor = roadColor === 4 ? 0 : roadColor + 1;
+      roadColor = roadColor === 'none' ? props.player : 'none';
       changeRoadColor(roadColor);
   }
 
@@ -21,7 +21,7 @@ const Road = (props) => {
     <div className={divClass}>
       <button className={roadClass} onClick={toggleColor}>
           <svg width={width} height={height}>
-              <polygon points={polygonPoints} stroke="white" fill={props.colors[roadColor]}/>
+              <polygon points={polygonPoints} stroke="white" fill={roadColor}/>
           </svg>
       </button>
     </div>
@@ -30,6 +30,7 @@ const Road = (props) => {
 
 const mapState = (state) => {
   return {
+    player: state.player,
     colors: state.cityColors,
   };
 };

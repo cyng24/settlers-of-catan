@@ -4,4 +4,7 @@ module.exports = {
     title: "Settlers Of Catan",
   },
   plugins: ["gatsby-plugin-gatsby-cloud"],
+  flags: {
+    DEV_SSR: false,
+  }
 };

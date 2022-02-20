@@ -1,6 +1,7 @@
 import React from 'react'
 import '../components/styles/main.css';
 import Dashboard from './Dashboard.jsx'
+import Player from './Player.jsx'
 import Robber from './Robber.jsx'
 import Board from './Board.jsx'
 import Pieces from './Pieces.jsx'
@@ -28,16 +29,21 @@ export default class Game extends React.Component {
     
   render() {
     return (
-      <div className="game">
+      <div>
         <Dashboard cityToggle={this.changeCityState} addCity={this.state.addCity} roll={this.roll} diceRoll={this.state.diceRoll} />
-        {typeof window !== "undefined" ?
-          <div class="gameboard">
-            <Robber />
-            <Board diceRoll={this.state.diceRoll} />
-            <Pieces addCity={this.state.addCity} />
+        <div className='d-flex'>
+          <div className='flex-column'>
+            <Player />
           </div>
-          : null
-        }
+          {typeof window !== "undefined" ?
+            <div className="position-static">
+              <Robber />
+              <Board diceRoll={this.state.diceRoll} />
+              <Pieces addCity={this.state.addCity} />
+            </div>
+            : null
+          }
+        </div>
       </div>
     )
   }
