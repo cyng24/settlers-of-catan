@@ -41,11 +41,11 @@ class Dashboard extends React.Component {
           <span className="lead">{this.props.diceRoll}</span>
         </button>
       </div>
-      <BankCard cardProps={bankProps} hex={tileColors.green} value={bankProps.values.pasture} />
-      <BankCard cardProps={bankProps} hex={tileColors.red} value={bankProps.values.hill} />
-      <BankCard cardProps={bankProps} hex={tileColors.brown} value={bankProps.values.forest} />
-      <BankCard cardProps={bankProps} hex={tileColors.yellow} value={bankProps.values.field} />
-      <BankCard cardProps={bankProps} hex={tileColors.gray} value={bankProps.values.mountain} />
+      <BankCard cardProps={bankProps} hex={tileColors.green} value={bankProps.bankValues.pasture} />
+      <BankCard cardProps={bankProps} hex={tileColors.red} value={bankProps.bankValues.hill} />
+      <BankCard cardProps={bankProps} hex={tileColors.brown} value={bankProps.bankValues.forest} />
+      <BankCard cardProps={bankProps} hex={tileColors.yellow} value={bankProps.bankValues.field} />
+      <BankCard cardProps={bankProps} hex={tileColors.gray} value={bankProps.bankValues.mountain} />
       <svg width={bankProps.size} height={bankProps.size}>
         <rect x="4" y="4" width={bankProps.size-8} height={bankProps.size-8} stroke="black" fill="none" />
       </svg>

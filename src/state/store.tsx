@@ -1,4 +1,5 @@
-import { createStore as reduxCreateStore } from "redux"
+import { configureStore, createAction, createReducer } from '@reduxjs/toolkit'
+import { InitialStateProps, ResourceProp } from './props'
 
 const tileGreen = '#759d75';
 const tileRed = '#ae5d5d';
@@ -25,6 +26,9 @@ const cardSize = 80;
 const cardPolygon = `${margin} ${margin} ${cardSize-margin} ${margin} ${cardSize-margin} ${cardSize-margin} ${margin} ${cardSize-margin}`;
 const cardFontsize = cardSize/6;
 
+const initBankValue = 19;
+
+
 const initialState = {
     player: null,
     tileProps: { 
@@ -40,8 +44,8 @@ const initialState = {
     bankProps: { 
         size: cardSize/1.5, 
         fontSize: cardFontsize, 
-        values: { 
-            pasture: 19, field: 19, hill: 19, mountain: 19, forest: 19
+        bankValues: { 
+            pasture: initBankValue, field: initBankValue, hill: initBankValue, mountain: initBankValue, forest: initBankValue
         }
     },
     tileColors: { green: tileGreen, red: tileRed, yellow: tileYellow, brown: tileBrown, gray: tileGray, blue: tileBlue },
@@ -49,11 +53,11 @@ const initialState = {
     types: randomize(tileTypes),
     values: randomize(tileValues),
     harbors: randomize(harborTypes),
-}
+} as InitialStateProps
 
-function randomize(val) {
+function randomize(val: any[]) {
     const len = val.length;
-    let randomArray = [];
+    const randomArray: any[] = [];
     for (let i=0; i<len; i++) {
         let newLen = val.length;
         let index = Math.floor(Math.random()*newLen);
@@ -63,23 +67,38 @@ function randomize(val) {
     return randomArray;
 }
 
-const reducer = (state, action) => {
-    switch(action.type) {
-      case 'changePlayer':
-        return Object.assign({}, state, {
-          player: action.player,
-        });
-      case 'useResource':
-        let bankProps = state.bankProps;
-        let prevValue = bankProps.values[action.resource];
-        bankProps.values[action.resource] = prevValue - action.value;
-        return Object.assign({}, state, {
-          bankProps,
-        })
-      default:
-        return state;
-    }
-}
+const changePlayer = createAction<string>('changePlayer')
+const useResource = createAction<ResourceProp>('useResource')
 
-const createStore = () => reduxCreateStore(reducer, initialState)
+const reducer = createReducer(initialState, (builder) => {
+  builder
+    .addCase(changePlayer, (state, action) => {
+      state.player = action.payload
+    })
+    .addCase(useResource, (state, action) => {
+      state.bankProps.bankValues[action.payload.resource] -= action.payload.value
+    })
+})
+
+// const reducer = (state, action) => {
+//     switch(action.type) {
+//       case 'changePlayer':
+//         return { ...state, player: action.player }
+//       case 'useResource':
+//         let prevValue = state.bankProps.bankValues[action.resource];
+//         return { ...state, 
+//           bankProps: {
+//             ...state.bankProps,
+//             values: {
+//               ...state.bankProps.bankValues,
+//               [action.resource]: prevValue - action.value,
+//             }
+//           }
+//         }
+//       default:
+//         return initialState;
+//     }
+// }
+
+const createStore = () => configureStore({reducer})
 export default createStore
